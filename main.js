@@ -14,6 +14,9 @@ function updateValue(e) {
 plus.addEventListener("click", function(event){
     event.preventDefault();
     current_num += parseInt(count);
+    if(current_num >= 0) {
+        display.classList.remove('red');
+    }
     display.innerText = current_num;
 });
 
@@ -21,5 +24,8 @@ minus.addEventListener('click', function(event){
     event.preventDefault();
     current_num -= parseInt(count);
     display.innerText = current_num;
+    if(current_num < 0) {
+        display.classList.add("red");
+    }
 });
 display.innerText = current_num;
