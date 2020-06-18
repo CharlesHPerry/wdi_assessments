@@ -3,8 +3,8 @@ const display = document.getElementById('display_num');
 const plus = document.getElementById('plus');
 const minus = document.getElementById('minus');
 const inputText = document.getElementById('input_box');
-var count = 1;
-var current_num = display.innerText
+var count = inputText.value;
+var current_num = 0;
 
 inputText.addEventListener('change', updateValue)
 function updateValue(e) {
@@ -13,10 +13,13 @@ function updateValue(e) {
 
 plus.addEventListener("click", function(event){
     event.preventDefault();
-    current_num += count;
+    current_num += parseInt(count);
+    display.innerText = current_num;
 });
 
 minus.addEventListener('click', function(event){
     event.preventDefault();
-    current_num -= count;
+    current_num -= parseInt(count);
+    display.innerText = current_num;
 });
+display.innerText = current_num;
