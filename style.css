@@ -1,0 +1,9 @@
+body{
+    height: auto;
+    width: auto;
+}
+#display_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
